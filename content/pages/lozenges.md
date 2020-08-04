@@ -46,4 +46,28 @@ sections:
 
           • Sentiment using the \[sentiment colors] set
         image: /assets/lozenges-variations-1.png
+      - text: When there isn't any unifying themes (e.g user defined tags or categories)
+          use the default style attribute lozenges.
+        image: /assets/lozenges-variations-2.png
+      - title: "Status Lozenges "
+        text: >-
+          Status lozenges highlights the status of a process undertaken by the
+          user. These lozenges use uppercase labels and feature a status dot
+          using the \[attention color] set.
+
+
+          There are 4 status sets:
+
+
+          • Success: Completed successfully (e.g success, done, available, approved, added)\
+
+          • Info: In progress or open (e.g in progress, open)\
+
+          • Warning: requires attention (e.g busy, pending, blocked)\
+
+          • Error: encounted a problem (e.g. error, declined, failed, critical).
+      - title: Spinner Lozenges
+        text: Use the spinner lozenge to let users know that item’s status is being
+          processed and may take an indeterminate amount of time.
+        image: /assets/lozenges-variations-4.png
 ---
