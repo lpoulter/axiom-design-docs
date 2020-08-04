@@ -70,4 +70,29 @@ sections:
         text: Use the spinner lozenge to let users know that item’s status is being
           processed and may take an indeterminate amount of time.
         image: /assets/lozenges-variations-4.png
+  - type: block_list
+    title: Best practice
+    blocks:
+      - title: Lozenges vs badges
+        text: Do not use lozenges to show counts or numerical figures. Use badges
+          instead.
+        image: /assets/lozenges-best-practice-1.png
+      - title: Colors
+        text: Use color in a meaningful way to aid quick regonition of an particular
+          attribute or status.
+        image: /assets/lozenges-best-practice-2.png
+      - title: Overflow
+        text: The maximum width for a lozenge is 160px. When the lozenge text exceeds
+          the max width, the text will be truncated with ellipsis.
+      - title: Label case
+        image: /assets/lozenges-best-practice-4.png
+        text: |-
+          Attribute lozenges use sentance case.
+
+          Status and spinner lozenges use uppercase.
+
+          Do not mix the two different approaches.
+      - title: Don’t be evil 👿
+        text: Please never do this.
+        image: /assets/lozenges-best-practice-5.png
 ---
