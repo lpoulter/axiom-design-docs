@@ -10,7 +10,7 @@ sections:
     section_introduction: ""
     blocks:
       - text: |-
-          A) Container \
+          A) Container 
           B) Text label
         title: ""
         image: /assets/lozenges-anatomy-1.png
@@ -18,9 +18,9 @@ sections:
     title: Sizes
     blocks:
       - text: |-
-          Lozenges come in 2 sizes for use in different applications.\
-          \
-          • Small\
+          Lozenges come in 2 sizes for use in different applications.
+
+          • Small
           • Medium
         image: /assets/lozenges-sizes-1.png
   - type: block_list
@@ -40,11 +40,11 @@ sections:
           Color is used in a meaningful way to aid quick regonition across related themes such as:
 
 
-          • Content sources – using the \[social network colors] and \[page type colors] sets\
+          • Content sources – using the [social network colors] and [page type colors] sets
 
-          • Interests, professions and locations – using the \[curated product colors] set\
+          • Interests, professions and locations – using the [curated product colors] set
 
-          • Sentiment using the \[sentiment colors] set
+          • Sentiment using the [sentiment colors] set
         image: /assets/lozenges-variations-1.png
       - text: When there isn't any unifying themes (e.g user defined tags or categories)
           use the default style attribute lozenges.
@@ -53,19 +53,20 @@ sections:
         text: >-
           Status lozenges highlights the status of a process undertaken by the
           user. These lozenges use uppercase labels and feature a status dot
-          using the \[attention color] set.
+          using the [attention color] set.
 
 
           There are 4 status sets:
 
 
-          • Success: Completed successfully (e.g success, done, available, approved, added)\
+          • Success: Completed successfully (e.g success, done, available, approved, added)
 
-          • Info: In progress or open (e.g in progress, open)\
+          • Info: In progress or open (e.g in progress, open)
 
-          • Warning: requires attention (e.g busy, pending, blocked)\
+          • Warning: requires attention (e.g busy, pending, blocked)
 
           • Error: encounted a problem (e.g. error, declined, failed, critical).
+        image: /assets/lozenges-variations-3.png
       - title: Spinner Lozenges
         text: Use the spinner lozenge to let users know that item’s status is being
           processed and may take an indeterminate amount of time.
@@ -78,16 +79,17 @@ sections:
           instead.
         image: /assets/lozenges-best-practice-1.png
       - title: Colors
-        text: Use color in a meaningful way to aid quick regonition of an particular
+        text: Use color in a meaningful way to aid quick recognition of a particular
           attribute or status.
         image: /assets/lozenges-best-practice-2.png
       - title: Overflow
         text: The maximum width for a lozenge is 160px. When the lozenge text exceeds
           the max width, the text will be truncated with ellipsis.
+        image: /assets/lozenges-best-practice-3.png
       - title: Label case
         image: /assets/lozenges-best-practice-4.png
         text: |-
-          Attribute lozenges use sentance case.
+          Attribute lozenges use sentence case.
 
           Status and spinner lozenges use uppercase.
 
