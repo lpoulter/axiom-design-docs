@@ -17,7 +17,7 @@ export default function ComponentTemplate({
         title={frontmatter.title}
         content={frontmatter.main_introduction}
       />
-      {frontmatter.sections.map(({ title, blocks, text }) => {
+      {frontmatter.sections?.map(({ title, blocks, text }) => {
         return (
           <div className='section-title'>
             <SectionTitle title={title} content={text} />
