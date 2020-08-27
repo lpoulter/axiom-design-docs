@@ -33,8 +33,10 @@ sections:
 
           C) Active
         image: /assets/breadcrumbs_behavior.png
-      - title: Sizes
-        text: |-
+  - type: block_list
+    title: Sizes
+    blocks:
+      - text: |-
           Breadcrumbs come in four sizes to match with the type scales:
 
           A) Body
@@ -86,7 +88,7 @@ sections:
       - title: Long breadcrumbs
         text: Do not wrap breadcrumbs to multiple lines.
         image: /assets/breadcrumbs_best_practice_4.png
-      - text: Do not wrap breadcrumbs to multiple lines.
+      - text: Instead use the ellipsis button icon \[Link].
         image: /assets/breadcrumbs_best_practice_5.png
       - title: "History vs hierarchy "
         text: Do not use breadcrumbs to show the user's history. Showing the actual
