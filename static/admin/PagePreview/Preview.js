@@ -12,9 +12,14 @@ function ComponentTemplate({ component_name, main_introduction, sections }) {
         return (
           <div className="section-title">
             <SectionTitle title={title} content={text} />
-            {blocks.map(({ title, text, image }) => (
+            {blocks.map(({ title, text, image, align }) => (
               <div>
-                <ImageWithCopy title={title} content={text} img={image} />
+                <ImageWithCopy
+                  title={title}
+                  content={text}
+                  img={image}
+                  textAlign={align}
+                />
               </div>
             ))}
           </div>

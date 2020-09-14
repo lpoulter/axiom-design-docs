@@ -13,7 +13,7 @@ import {
 import "./axiom-docs.css"
 
 export default function ImageWithCopy({
-  imageAlign = "left",
+  textAlign = "right",
   title,
   content,
   img,
@@ -27,7 +27,7 @@ export default function ImageWithCopy({
   }
 
   function ContentBlock() {
-    const formattedContent = content?.split("\n") || [];
+    const formattedContent = content?.split("\n") || []
     return (
       <Base className="content-block">
         <Heading textSize="headtitle">
@@ -39,17 +39,37 @@ export default function ImageWithCopy({
       </Base>
     )
   }
+  const getBlockContent = () => {
+    console.log("textAlign", textAlign)
+
+    if (textAlign === "left") {
+      return (
+        <>
+          <GridCell>
+            <ContentBlock />
+          </GridCell>
+          <GridCell>
+            <ImageBlock />
+          </GridCell>
+        </>
+      )
+    }
+
+    return (
+      <>
+        <GridCell>
+          <ImageBlock />
+        </GridCell>
+        <GridCell>
+          <ContentBlock />
+        </GridCell>
+      </>
+    )
+  }
 
   return (
     <Base className="image-with-copy-container">
-      <Grid>
-        <GridCell>
-          {imageAlign === "right" ? <ContentBlock /> : <ImageBlock />}
-        </GridCell>
-        <GridCell>
-          {imageAlign === "right" ? <ImageBlock /> : <ContentBlock />}
-        </GridCell>
-      </Grid>
+      <Grid>{getBlockContent()}</Grid>
     </Base>
   )
 }
