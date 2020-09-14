@@ -48,7 +48,7 @@ sections:
 
           \[Lozenges] highlight an item's attributes or status and can use alphanumeric characters.
         image: /assets/badges-best-practice-1.png
-        Align: right
+        Align: left
       - image: /assets/badges-best-practice-2.png
       - title: Maximum value and length
         text: >-
