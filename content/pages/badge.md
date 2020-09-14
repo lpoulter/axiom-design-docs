@@ -50,6 +50,7 @@ sections:
         image: /assets/badges-best-practice-1.png
         align: left
       - image: /assets/badges-best-practice-2.png
+        align: left
       - title: Maximum value and length
         text: >-
           For large numbers, consider setting a maximum value and maximum number
@@ -58,5 +59,7 @@ sections:
 
           For more guidance see \[number formats]
         image: /assets/badges-best-practice-3.png
+        align: left
       - image: /assets/badges-best-practice-4.png
+        align: left
 ---
