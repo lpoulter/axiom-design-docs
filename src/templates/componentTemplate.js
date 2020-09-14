@@ -10,7 +10,7 @@ export default function ComponentTemplate({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter } = markdownRemark
-
+  console.log(frontmatter.sections)
   return (
     <div className="body">
       <PageHeading
@@ -19,11 +19,16 @@ export default function ComponentTemplate({
       />
       {frontmatter.sections?.map(({ title, blocks, text }) => {
         return (
-          <div className='section-title'>
+          <div className="section-title">
             <SectionTitle title={title} content={text} />
-            {blocks.map(({ title, text, image }) => (
+            {blocks.map(({ title, text, image, align }) => (
               <div>
-                <ImageWithCopy title={title} content={text} img={image} />
+                <ImageWithCopy
+                  title={title}
+                  content={text}
+                  img={image}
+                  textAlign={align}
+                />
               </div>
             ))}
           </div>
@@ -42,6 +47,7 @@ export const pageQuery = graphql`
       text
       image
       alt
+      align
     }
   }
 

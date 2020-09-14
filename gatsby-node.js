@@ -13,6 +13,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     text: String
     image: String
     alt: String
+    align: String
   }
   
   type Sections {

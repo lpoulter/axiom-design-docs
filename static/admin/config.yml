@@ -35,5 +35,6 @@ collections:
                 fields:
                   - { label: Title, name: title, widget: string, required: false }
                   - { label: Text, name: text, widget: markdown, required: false }
+                  - { label: Text Align, name: align, widget: select, default: right, options: [left, right]}
                   - { label: "Image", name: "image", widget: "image", required: false }
                   - { label: Image Description, name: alt, widget: string, required: false }
