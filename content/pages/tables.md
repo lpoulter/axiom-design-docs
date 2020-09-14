@@ -1,9 +1,9 @@
 ---
 post_type: page
+component_name: Tables
 title: Tables
 main_introduction: Tables are used to display information that allows users to
   quickly scan, sort and compare data.
-component_name: Tables
 sections:
   - type: block_list
     title: Anatomy
@@ -16,7 +16,7 @@ sections:
           C) Row divider 
 
           D) Table Cell / Table Data
-        image: screenshot-2020-07-03-at-17.28.16.png
+        image: /assets/anatomy.png
         alt: header figure
   - type: block_list
     title: Interaction States
