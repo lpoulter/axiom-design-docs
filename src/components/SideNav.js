@@ -8,7 +8,7 @@ import "./sidenav.css"
 const SideNav = ({ documents }) => {
   return (
     <div className="sidebar_">
-      <Link style={{ "text-decoration": "none", color: "inherit" }} to="/">
+      <Link style={{ textDecoration: "none", color: "inherit" }} to="/">
         <Heading style={{ margin: "0 0 20px 15px" }} textSize="headline">
           <Strong>axiom </Strong> Components
         </Heading>
