@@ -1,3 +1,3 @@
 ---
-parent_name: Selection controls
+parent_name: Selection Controls
 ---
