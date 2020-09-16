@@ -14,4 +14,5 @@ sections:
     blocks:
       - align: right
         image: /assets/typography-font.png
+        imageWidth: full
 ---
