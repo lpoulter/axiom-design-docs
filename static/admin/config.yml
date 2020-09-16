@@ -8,6 +8,14 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
+  - label: "Parent Components"
+    name: "parent_components"
+    folder: "content/parent_components"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Parent Name", name: "parent_name",  widget: "string" }
   - name: pages
     label: "Page"
     folder: "content/pages"
@@ -15,6 +23,7 @@ collections:
     slug: "{{component_name}}"
     fields:
       - { label: "post_type", name: "post_type", widget: "hidden", default: "page" }
+      - { label: "Parent Component", name: "parent_component", widget: "relation", default: "none", multiple: false, collection: "parent_components", searchFields: ["parent_name"], valueField: "parent_name",  display_fields: ["parent_name"], required: false }
       - { label: "Component Name", name: "component_name", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Short Introduction", name: "main_introduction", widget: "string" }
