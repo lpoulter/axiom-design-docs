@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import ComponentTemplate from "../../../src/templates/ComponentTemplate"
+import ComponentTemplate from "../../../src/templates/componentTemplate"
 
 export default function Preview(props) {
   // Netlify CMS uses Immutable.js
