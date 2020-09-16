@@ -11,5 +11,9 @@ sections:
       - align: right
         imageWidth: half
         image: /assets/radio_button-anatomy.png
-        alt: A) Radio button B) Label
+        alt: ""
+        text: |-
+          A) Radio button 
+
+          B) Label
 ---
