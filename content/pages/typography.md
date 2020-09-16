@@ -1,7 +1,7 @@
 ---
 post_type: page
 component_name: Typography
-title: Typography_title
+title: Typography
 main_introduction: Typography plays a key part in helping users navigate an
   interface. Good typographic rules help establish consistency, hierarchy  and
   clarity.
