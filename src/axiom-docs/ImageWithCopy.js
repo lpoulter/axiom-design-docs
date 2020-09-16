@@ -17,11 +17,12 @@ export default function ImageWithCopy({
   title,
   content,
   img,
+  imageWidth,
 }) {
-  function ImageBlock() {
+  function ImageBlock({ width }) {
     return (
       <Base className="image-block">
-        <Image src={img}></Image>
+        <Image src={img} width={width}></Image>
       </Base>
     )
   }
@@ -40,6 +41,13 @@ export default function ImageWithCopy({
     )
   }
   const getBlockContent = () => {
+    if (!content && imageWidth === "full") {
+      return (
+        <>
+          <ImageBlock width="100vw" />
+        </>
+      )
+    }
     if (textAlign === "left") {
       return (
         <>
