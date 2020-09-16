@@ -17,13 +17,14 @@ export default function ComponentTemplate({
         return (
           <div className="section-title">
             <SectionTitle title={title} content={text} />
-            {blocks.map(({ title, text, image, align }) => (
+            {blocks.map(({ title, text, image, align, imageWidth }) => (
               <div>
                 <ImageWithCopy
                   title={title}
                   content={text}
                   img={image}
                   textAlign={align}
+                  imageWidth={imageWidth}
                 />
               </div>
             ))}

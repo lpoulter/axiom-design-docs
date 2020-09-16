@@ -25,6 +25,7 @@ export const pageQuery = graphql`
       image
       alt
       align
+      imageWidth
     }
   }
 
