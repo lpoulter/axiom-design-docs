@@ -14,6 +14,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     image: String
     alt: String
     align: String
+    imageWidth: String
   }
   
   type Sections {
