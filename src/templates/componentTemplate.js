@@ -1,23 +1,19 @@
 import React from "react"
-import { graphql } from "gatsby"
+import PropTypes from "prop-types"
 import PageHeading from "../axiom-docs/PageHeading"
 import SectionTitle from "../axiom-docs/SectionTitle"
 import ImageWithCopy from "../axiom-docs/ImageWithCopy"
 import "./component-template.css"
 
 export default function ComponentTemplate({
-  data, // this prop will be injected by the GraphQL query below.
+  title,
+  mainIntroduction,
+  sections,
 }) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter } = markdownRemark
-  console.log(frontmatter.sections)
   return (
     <div className="body">
-      <PageHeading
-        title={frontmatter.title}
-        content={frontmatter.main_introduction}
-      />
-      {frontmatter.sections?.map(({ title, blocks, text }) => {
+      <PageHeading title={title} content={mainIntroduction} />
+      {sections?.map(({ title, blocks, text }) => {
         return (
           <div className="section-title">
             <SectionTitle title={title} content={text} />
@@ -38,29 +34,8 @@ export default function ComponentTemplate({
   )
 }
 
-export const pageQuery = graphql`
-  fragment BlockList on Sections {
-    type
-    title
-    blocks {
-      title
-      text
-      image
-      alt
-      align
-    }
-  }
-
-  query($component_name: String!) {
-    markdownRemark(frontmatter: { component_name: { eq: $component_name } }) {
-      frontmatter {
-        title
-        component_name
-        main_introduction
-        sections {
-          ...BlockList
-        }
-      }
-    }
-  }
-`
+ComponentTemplate.propTypes = {
+  title: PropTypes.string,
+  mainIntroduction: PropTypes.string,
+  sections: PropTypes.array,
+}

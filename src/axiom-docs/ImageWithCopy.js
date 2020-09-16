@@ -40,8 +40,6 @@ export default function ImageWithCopy({
     )
   }
   const getBlockContent = () => {
-    console.log("textAlign", textAlign)
-
     if (textAlign === "left") {
       return (
         <>
