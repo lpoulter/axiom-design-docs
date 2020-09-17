@@ -1,0 +1,28 @@
+:root {
+  --full-block-width: 984px;
+  --half-block-width: calc(
+    var(--full-block-width) / 2 - var(--half-block-gutter)
+  );
+  --half-block-gutter: 24px;
+}
+
+.block-layout {
+  display: grid;
+  grid-template-columns: var(--half-block-width) var(--half-block-width);
+  column-gap: var(--half-block-gutter);
+  row-gap: var(--half-block-gutter);
+}
+
+.block {
+  background-color: white;
+  outline: red 1px solid;
+}
+
+.block--half {
+  /* width: var(--half-block-width); */
+}
+
+.block--full {
+  grid-column: 1/-1;
+}
+

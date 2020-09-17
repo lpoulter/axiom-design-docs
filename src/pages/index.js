@@ -2,7 +2,7 @@ import React from "react"
 import { Base, Heading, Button, Strong } from "@brandwatch/axiom-components"
 import SideNav from "../components/SideNav"
 
-import "./home.css"
+import "./index.css"
 
 const IndexPage = ({ data }) => {
   const documentNames = data.allMarkdownRemark.edges.map(edge => {
@@ -13,7 +13,10 @@ const IndexPage = ({ data }) => {
     <Base className="home-nav-container ax-theme--day">
       <SideNav documents={documentNames} />
       <Base className="home-content">
-        <Button style={{ float: "right", margin: "20px 20px 0 0" }} onClick={() => window.location.href='/admin'}>
+        <Button
+          style={{ float: "right", margin: "20px 20px 0 0" }}
+          onClick={() => (window.location.href = "/admin")}
+        >
           Edit this page
         </Button>
         <Base className="home-heading">
