@@ -4,7 +4,7 @@ import { Image, Heading, Strong, Paragraph } from "@brandwatch/axiom-components"
 import Layout from "../components/Layout"
 
 import "../pages/Blocks.css"
-import "./ComponentTemplate.css"
+import "./componentTemplate.css"
 
 function PageHeading({ title, content }) {
   return (
