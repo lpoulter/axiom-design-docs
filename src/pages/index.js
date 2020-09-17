@@ -1,7 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Base, Heading, Button, Strong } from "@brandwatch/axiom-components"
+import {
+  Base,
+  Heading,
+  Button,
+  Strong,
+  Image,
+} from "@brandwatch/axiom-components"
 import SideNav from "../components/SideNav"
+import CoverImage from "../../static/assets/homepage.png"
 
 import "./index.css"
 
@@ -13,19 +20,17 @@ const IndexPage = ({ data }) => {
   return (
     <Base className="home-nav-container ax-theme--day">
       <SideNav documents={documentNames} />
-      <Base className="home-content">
-        <Button
-          style={{ float: "right", margin: "20px 20px 0 0" }}
-          onClick={() => (window.location.href = "/admin")}
-        >
-          Edit this page
-        </Button>
-        <Base className="home-heading">
-          <Heading style={{ "font-size": "80px" }} textSize="display1">
-            <Strong>axiom </Strong>Design Docs
-          </Heading>
-        </Base>
-      </Base>
+      <div className="page-container">
+        <div className="page">
+          <div className="home-title">
+            <Heading textSize="display1">
+              <Strong>axiom </Strong>Design System{" "}
+            </Heading>
+          </div>
+
+          <img src={CoverImage} className="cover-image" />
+        </div>
+      </div>
     </Base>
   )
 }
