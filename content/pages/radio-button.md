@@ -1,6 +1,6 @@
 ---
 post_type: page
-parent_component: selection controls
+parent_component: Selection Controls
 component_name: Radio Button
 title: Radio Button
 main_introduction: Radio buttons let users choose a single selection from a list
