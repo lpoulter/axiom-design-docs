@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import { Base, Heading, Button, Strong } from "@brandwatch/axiom-components"
 import SideNav from "../components/SideNav"
 
