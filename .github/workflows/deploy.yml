@@ -11,6 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: npm install
+    - run: npm run clean
     - run: npm run build
     - name: Deploy to Netlify
       uses: nwtgck/actions-netlify@v1.1
