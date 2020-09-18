@@ -8,7 +8,7 @@ import {
   Image,
 } from "@brandwatch/axiom-components"
 import SideNav from "../components/SideNav"
-import CoverImage from "../../static/assets/homepage.png"
+import CoverImage from "../../static/assets/homepage.jpg"
 
 import "./index.css"
 
