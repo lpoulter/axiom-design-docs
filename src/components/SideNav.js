@@ -4,24 +4,24 @@ import { Base, TextInput, TextInputIcon } from "@brandwatch/axiom-components"
 
 import "./sidenav.css"
 
-const SideNav = ({ documents }) => {
+const SideNav = ({ componentNames }) => {
   return (
     <div className="sideNav">
       <TextInput aria-label="Search components" placeholder="Search components">
         <TextInputIcon align="left" name="magnify-glass" iconColor="subtle" />
       </TextInput>
       <ul>
-        {documents.map(doc => {
+        {componentNames.map(componentName => {
           return (
-            <li key={doc}>
+            <li key={componentName}>
               <Base className="sidebar__link">
                 <Link
                   activeClassName="sidebar__link active"
-                  key={doc}
+                  key={componentName}
                   className="sidebar__link"
-                  to={`/${doc.toLowerCase()}`}
+                  to={`/${componentName.toLowerCase()}`}
                 >
-                  {doc}
+                  {componentName}
                 </Link>
               </Base>
             </li>
