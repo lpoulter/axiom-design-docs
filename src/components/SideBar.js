@@ -2,28 +2,26 @@ import React from "react"
 import { Link } from "gatsby"
 import { Base, TextInput, TextInputIcon } from "@brandwatch/axiom-components"
 
-import "./sidenav.css"
+import "./Sidebar.css"
 
-const SideNav = ({ componentNames }) => {
+function Sidebar({ componentNames }) {
   return (
-    <div className="sideNav">
+    <div className="sidebar">
       <TextInput aria-label="Search components" placeholder="Search components">
         <TextInputIcon align="left" name="magnify-glass" iconColor="subtle" />
       </TextInput>
-      <ul>
+      <ul className="sidebar__links">
         {componentNames.map(componentName => {
           return (
             <li key={componentName}>
-              <Base className="sidebar__link">
-                <Link
-                  activeClassName="sidebar__link active"
-                  key={componentName}
-                  className="sidebar__link"
-                  to={`/${componentName.toLowerCase()}`}
-                >
-                  {componentName}
-                </Link>
-              </Base>
+              <Link
+                key={componentName}
+                className="sidebar__link"
+                activeClassName="sidebar__link--active"
+                to={`/${componentName.toLowerCase()}`}
+              >
+                {componentName}
+              </Link>
             </li>
           )
         })}
@@ -32,4 +30,4 @@ const SideNav = ({ componentNames }) => {
   )
 }
 
-export default SideNav
+export default Sidebar
