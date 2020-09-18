@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Base className="home-nav-container ax-theme--day">
-      <SideNav documents={componentNames} />
+      <SideNav componentNames={componentNames} />
       <div className="page-container">
         <div className="page">
           <div className="home-title">
