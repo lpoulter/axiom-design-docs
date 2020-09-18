@@ -7,9 +7,15 @@ import "./Sidebar.css"
 function Sidebar({ componentNames }) {
   return (
     <div className="sidebar">
-      <TextInput aria-label="Search components" placeholder="Search components">
-        <TextInputIcon align="left" name="magnify-glass" iconColor="subtle" />
-      </TextInput>
+      <div className="sidebar__search-container">
+        <TextInput
+          aria-label="Search components"
+          placeholder="Search components"
+        >
+          <TextInputIcon align="left" name="magnify-glass" iconColor="subtle" />
+        </TextInput>
+      </div>
+
       <ul className="sidebar__links">
         {componentNames.map(componentName => {
           return (
