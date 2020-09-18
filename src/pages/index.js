@@ -8,31 +8,32 @@ import {
   Strong,
   Image,
 } from "@brandwatch/axiom-components"
-import Sidebar from "../components/Sidebar"
+import Layout from "../components/Layout"
 
 import "./index.css"
 
 const IndexPage = ({ data }) => {
-  const { allMarkdownRemark, fileName } = data
-  const componentNames = allMarkdownRemark.edges.map(edge => {
-    return edge.node.frontmatter.component_name
-  })
+  const { fileName } = data
 
   return (
-    <Base className="home-nav-container ax-theme--day">
-      <Sidebar componentNames={componentNames} />
-      <div className="page-container">
-        <div className="page">
-          <div className="home-title">
-            <Heading textSize="display1">
-              <Strong>axiom </Strong>Design System{" "}
-            </Heading>
-          </div>
+    <Layout>
+      <Base className="home-nav-container ax-theme--day">
+        <div className="page-container">
+          <div className="page">
+            <div className="home-title">
+              <Heading textSize="display1">
+                <Strong>axiom </Strong>Design System{" "}
+              </Heading>
+            </div>
 
-          <Img fixed={fileName.childImageSharp.fixed} className="cover-image" />
+            <Img
+              fixed={fileName.childImageSharp.fixed}
+              className="cover-image"
+            />
+          </div>
         </div>
-      </div>
-    </Base>
+      </Base>
+    </Layout>
   )
 }
 
@@ -40,16 +41,6 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query HomepageQuery {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            component_name
-            main_introduction
-          }
-        }
-      }
-    }
     fileName: file(relativePath: { eq: "cover-image-990.png" }) {
       childImageSharp {
         fixed(width: 990) {
