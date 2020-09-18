@@ -1,3 +1,10 @@
 .sideNav {
-  border-right: 1px solid grey;
+  border-right: 1px solid var(--color-theme-border);
+  padding-top: var(--spacing-grid-size--x4);
+  padding-left: var(--spacing-grid-size--x4);
+  padding-right: var(--spacing-grid-size--x4);
+}
+
+.ax-input__icon-container {
+  border-style: none none solid none;
 }
