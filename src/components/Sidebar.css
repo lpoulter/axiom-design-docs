@@ -32,10 +32,6 @@
   color: inherit;
 }
 
-.sidebar__links > li {
-
-}
-
 .sidebar__links > li:hover {
   cursor: pointer;
   background-color: var(--color-theme-background--hover);
