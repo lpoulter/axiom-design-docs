@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Base, Heading, Strong } from "@brandwatch/axiom-components"
+import { Heading, Strong } from "@brandwatch/axiom-components"
 import Layout from "../components/Layout"
 
 import "./index.css"

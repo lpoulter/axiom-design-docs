@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
-import Sidebar from "../components/Sidebar"
+import Sidebar from "./Sidebar"
 import "./Layout.css"
 
 function Layout({ children }) {
