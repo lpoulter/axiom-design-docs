@@ -8,7 +8,7 @@ import {
   Strong,
   Image,
 } from "@brandwatch/axiom-components"
-import SideNav from "../components/SideNav"
+import Sidebar from "../components/Sidebar"
 
 import "./index.css"
 
@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Base className="home-nav-container ax-theme--day">
-      <SideNav componentNames={componentNames} />
+      <Sidebar componentNames={componentNames} />
       <div className="page-container">
         <div className="page">
           <div className="home-title">
