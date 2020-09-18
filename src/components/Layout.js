@@ -1,12 +1,33 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
+import Sidebar from "../components/Sidebar"
+import "./Layout.css"
 
 function Layout({ children }) {
-  return <div className="ax-theme--day">{children}</div>
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  const data = useStaticQuery(graphql`
+    query ComponentNameQuery {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              component_name
+              main_introduction
+            }
+          }
+        }
+      }
+    }
+  `)
+  const componentNames = data.allMarkdownRemark.edges.map(edge => {
+    return edge.node.frontmatter.component_name
+  })
+  return (
+    <div className="ax-theme--day page-layout">
+      <Sidebar componentNames={componentNames} />
+      {children}
+    </div>
+  )
 }
 
 export default Layout
