@@ -1,5 +1,6 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 import {
   Base,
   Heading,
@@ -8,18 +9,18 @@ import {
   Image,
 } from "@brandwatch/axiom-components"
 import SideNav from "../components/SideNav"
-import CoverImage from "../../static/assets/homepage.jpg"
 
 import "./index.css"
 
 const IndexPage = ({ data }) => {
-  const documentNames = data.allMarkdownRemark.edges.map(edge => {
+  const { allMarkdownRemark, fileName } = data
+  const componentNames = allMarkdownRemark.edges.map(edge => {
     return edge.node.frontmatter.component_name
   })
 
   return (
     <Base className="home-nav-container ax-theme--day">
-      <SideNav documents={documentNames} />
+      <SideNav documents={componentNames} />
       <div className="page-container">
         <div className="page">
           <div className="home-title">
@@ -28,7 +29,7 @@ const IndexPage = ({ data }) => {
             </Heading>
           </div>
 
-          <img src={CoverImage} className="cover-image" />
+          <Img fixed={fileName.childImageSharp.fixed} className="cover-image" />
         </div>
       </div>
     </Base>
@@ -38,7 +39,7 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const pageQuery = graphql`
-  query MyQuery {
+  query HomepageQuery {
     allMarkdownRemark {
       edges {
         node {
@@ -46,6 +47,13 @@ export const pageQuery = graphql`
             component_name
             main_introduction
           }
+        }
+      }
+    }
+    fileName: file(relativePath: { eq: "cover-image-990.png" }) {
+      childImageSharp {
+        fixed(width: 990) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
