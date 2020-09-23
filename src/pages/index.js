@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
               <Strong>axiom </Strong>Design System{" "}
             </Heading>
           </div>
-          <Img fixed={fileName.childImageSharp.fixed} className="cover-image" />
+          <Img fluid={fileName.childImageSharp.fluid} className="cover-image" />
         </div>
       </div>
     </Layout>
@@ -31,8 +31,8 @@ export const pageQuery = graphql`
   query HomepageQuery {
     fileName: file(relativePath: { eq: "cover-image-990.png" }) {
       childImageSharp {
-        fixed(width: 990) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 990) {
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
