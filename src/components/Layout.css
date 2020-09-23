@@ -1,5 +1,5 @@
 .page-layout {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 250px minmax(auto, auto);
   height: 100vh;
 }
