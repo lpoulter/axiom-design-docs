@@ -24,10 +24,10 @@ function Layout({ children }) {
     return edge.node.frontmatter.component_name
   })
   return (
-    <div className="ax-theme--day page-layout">
+    <div className="ax-theme--day layout">
       <Topbar />
       <Sidebar componentNames={componentNames} />
-      <div style={{ gridArea: "content" }}>{children}</div>
+      <div className="layout__content">{children}</div>
     </div>
   )
 }
