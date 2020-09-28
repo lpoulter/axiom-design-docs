@@ -1,6 +1,10 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { TextInput, TextInputIcon } from "@brandwatch/axiom-components"
+import {
+  TextInput,
+  TextInputIcon,
+  Paragraph,
+} from "@brandwatch/axiom-components"
 
 import "./Sidebar.css"
 
@@ -33,7 +37,7 @@ function Sidebar({ componentNames }) {
                 activeClassName="sidebar__link--active"
                 to={`/${componentName.toLowerCase()}`}
               >
-                {componentName}
+                <Paragraph textColor="subtle">{componentName}</Paragraph>
               </Link>
             </li>
           )

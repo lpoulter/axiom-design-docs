@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import Sidebar from "./Sidebar"
+import Topbar from "./Topbar"
 import "./Layout.css"
 
 function Layout({ children }) {
@@ -24,8 +25,9 @@ function Layout({ children }) {
   })
   return (
     <div className="ax-theme--day page-layout">
+      <Topbar />
       <Sidebar componentNames={componentNames} />
-      {children}
+      <div style={{ gridArea: "content" }}>{children}</div>
     </div>
   )
 }
