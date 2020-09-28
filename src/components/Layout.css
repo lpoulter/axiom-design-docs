@@ -1,5 +1,10 @@
 .page-layout {
   display: grid;
+  grid-template-areas:
+    "topbar topbar topbar"
+    "sidebar content content"
+    "sidebar content content";
+  grid-auto-rows: min-content minmax(auto, auto);
   grid-template-columns: 250px minmax(auto, auto);
   height: 100vh;
 }
