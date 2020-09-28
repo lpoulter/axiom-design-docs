@@ -8,7 +8,7 @@
 
 .block-layout {
   display: grid;
-  grid-template-columns: var(--half-block-width) var(--half-block-width);
+  grid-template-columns: repeat(2, minmax(auto, var(--full-block-width)));
   column-gap: var(--half-block-gutter);
   row-gap: var(--half-block-gutter);
 }
@@ -26,3 +26,8 @@
   margin-bottom: 50px;
 }
 
+@media (max-width: 984px) {
+  .block-layout {
+    grid-template-columns: 1fr;
+  }
+}
