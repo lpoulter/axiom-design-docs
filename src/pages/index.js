@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Heading, Strong } from "@brandwatch/axiom-components"
+import { Heading, Strong, Paragraph } from "@brandwatch/axiom-components"
 import Layout from "../components/Layout"
 
 import "./index.css"
@@ -14,8 +14,11 @@ const IndexPage = ({ data }) => {
       <div className="page-container">
         <div className="page">
           <div className="home-title">
-            <Heading textSize="display1">
-              <Strong>axiom </Strong>Design System{" "}
+            <Heading textSize="display2">
+              <Strong>Axiom</Strong>
+            </Heading>
+            <Heading textSize="headtitle" textColor="subtle">
+              Our design system used to create best in class products
             </Heading>
           </div>
           <Img fluid={fileName.childImageSharp.fluid} className="cover-image" />

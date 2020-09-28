@@ -1,4 +1,4 @@
-.page-layout {
+.layout {
   display: grid;
   grid-template-areas:
     "topbar topbar topbar"
@@ -7,4 +7,10 @@
   grid-auto-rows: min-content minmax(auto, auto);
   grid-template-columns: 250px minmax(auto, auto);
   height: 100vh;
+}
+
+.layout__content {
+  grid-area: content;
+  display: flex;
+  height: calc(100vh - var(--topbar-height));
 }
