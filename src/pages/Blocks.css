@@ -18,11 +18,11 @@
   outline: red 1px solid;
 }
 
-.block--half {
-  /* width: var(--half-block-width); */
-}
-
 .block--full {
   grid-column: 1/-1;
+}
+
+.block--full:first-child {
+  margin-bottom: 50px;
 }
 
