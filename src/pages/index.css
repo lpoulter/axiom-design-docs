@@ -31,3 +31,7 @@
 .color-box.hooloovoo {
   background-color: var(--color-brand-hooloovoo);
 }
+
+.cover-image {
+  max-width: 800px;
+}
