@@ -9,7 +9,7 @@ import "./componentTemplate.css"
 function PageHeading({ title, content }) {
   return (
     <>
-      <Heading textSize="display2" textColor="body">
+      <Heading textSize="display2" textColor="body" className="component-heading">
         <Strong>{title}</Strong>
       </Heading>
       <Heading textSize="headtitle" textColor="subtle">
@@ -21,14 +21,14 @@ function PageHeading({ title, content }) {
 
 function BlockTitle({ title }) {
   return (
-    <Heading textSize="headtitle" textColor="body">
+    <> { title && <Heading textSize="headtitle" textColor="body" className="component-heading">
       {title}
-    </Heading>
+    </Heading>}</>
   )
 }
 
 function BlockText({ text }) {
-  return <Paragraph textColor="subtle">{text}</Paragraph>
+  return <>{text && <Paragraph textColor="subtle">{text}</Paragraph>}</>
 }
 
 function ComponentSection({ title, text, image, align, imageWidth }) {
@@ -87,7 +87,7 @@ export default function ComponentTemplate({
                   <Heading textSize="headline">
                     <Strong>{title}</Strong>
                   </Heading>
-                  <p>{text}</p>
+                  {text && <p>{text}</p>}
                 </div>
                 {blocks?.map(block => (
                   <ComponentSection {...block} />

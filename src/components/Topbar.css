@@ -18,3 +18,8 @@
 .topbar__heading {
   margin-top: 0;
 }
+
+.topbar__link {
+  display: flex;
+  text-decoration: none;
+}

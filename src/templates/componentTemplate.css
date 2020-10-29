@@ -1,8 +1,12 @@
 .component-page {
   width: 100%;
   max-width: var(--full-block-width);
-  margin-top: var(--spacing-grid-size--x5);
-  margin-bottom: var(--spacing-grid-size--x5);
+  margin-top: var(--page-margin-top);
+  margin-bottom:var(--page-margin-top);
   margin-right: auto;
   margin-left: auto;
+}
+
+.component-heading {
+  margin-bottom: 26px;
 }
