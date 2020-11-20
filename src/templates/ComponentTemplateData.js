@@ -6,6 +6,8 @@ export default function ComponentTemplateData({ data }) {
   const { markdownRemark } = data
   const { frontmatter } = markdownRemark
 
+  console.log('front', frontmatter.parent_component)
+
   return (
     <ComponentTemplate
       title={frontmatter.title}

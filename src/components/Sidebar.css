@@ -39,7 +39,8 @@
   color: inherit;
 }
 
-.sidebar__links > li:hover {
+
+.sidebar__links > li:hover:first-child {
   cursor: pointer;
   background-color: var(--color-theme-background--hover);
 }

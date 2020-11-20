@@ -8,11 +8,41 @@ import {
 
 import "./Sidebar.css"
 
-function Sidebar({ componentNames }) {
-  const [filterString, setFilterString] = useState("")
-  const filterComponents = componentNames.filter(name =>
-    name.toLowerCase().includes(filterString.toLowerCase())
+function ParentLink({ parent, children }) {
+  const [isOpen, setIsOpen] = useState()
+  return (
+    <>
+      <a
+        className="sidebar__link parent__link"
+        onClick={() => setIsOpen(lastValue => !lastValue)}
+      >
+        <Paragraph textColor="subtle">{parent}</Paragraph>
+      </a>
+
+      {isOpen &&
+        children.map(name => {
+          return (
+            <li key={name}>
+              <Link
+                key={name}
+                className="sidebar__link"
+                activeClassName="sidebar__link--active"
+                to={`/${name.toLowerCase()}`}
+              >
+                <Paragraph textColor="subtle">{name}</Paragraph>
+              </Link>
+            </li>
+          )
+        })}
+    </>
   )
+}
+
+function Sidebar({ components }) {
+  const [filterString, setFilterString] = useState("")
+  // const filterComponents = components.filter(({ name }) =>
+  //   name.toLowerCase().includes(filterString.toLowerCase())
+  // )
 
   return (
     <div className="sidebar">
@@ -28,17 +58,27 @@ function Sidebar({ componentNames }) {
       </div>
 
       <ul className="sidebar__links">
-        {filterComponents.map(componentName => {
+        {Object.entries(components).map(([parent, children]) => {
+          if (parent === "noParent") {
+            return children.map(name => {
+              return (
+                <li key={name}>
+                  <Link
+                    key={name}
+                    className="sidebar__link"
+                    activeClassName="sidebar__link--active"
+                    to={`/${name.toLowerCase()}`}
+                  >
+                    <Paragraph textColor="subtle">{name}</Paragraph>
+                  </Link>
+                </li>
+              )
+            })
+          }
+
           return (
-            <li key={componentName}>
-              <Link
-                key={componentName}
-                className="sidebar__link"
-                activeClassName="sidebar__link--active"
-                to={`/${componentName.toLowerCase()}`}
-              >
-                <Paragraph textColor="subtle">{componentName}</Paragraph>
-              </Link>
+            <li key={parent}>
+              <ParentLink parent={parent} children={children} />
             </li>
           )
         })}

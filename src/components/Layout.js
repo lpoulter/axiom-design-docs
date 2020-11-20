@@ -14,19 +14,37 @@ function Layout({ children }) {
             frontmatter {
               component_name
               main_introduction
+              parent_component
             }
           }
         }
       }
     }
   `)
-  const componentNames = data.allMarkdownRemark.edges.map(edge => {
-    return edge.node.frontmatter.component_name
+  const components = data.allMarkdownRemark.edges.map(edge => ({
+    name: edge.node.frontmatter.component_name,
+    parent: edge.node.frontmatter.parent_component,
+  }))
+
+  const componentsByParent = {}
+  components.forEach(({ name, parent }) => {
+    if (parent) {
+      componentsByParent[parent]
+        ? componentsByParent[parent].push(name)
+        : (componentsByParent[parent] = [name])
+    } else {
+      componentsByParent["noParent"]
+        ? componentsByParent["noParent"].push(name)
+        : (componentsByParent["noParent"] = [name])
+    }
   })
+
+  console.log("componentsByParent", componentsByParent)
+
   return (
     <div className="ax-theme--day layout">
       <Topbar />
-      <Sidebar componentNames={componentNames} />
+      <Sidebar components={componentsByParent} />
       <div className="layout__content">{children}</div>
     </div>
   )
